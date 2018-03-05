@@ -1,0 +1,18 @@
+required Installs
+1) install node.js
+2) npm install yarn
+3) yarn global add live-server
+live-server public
+
+4) yarn global add babel-cli
+5) yarn init
+
+local (to project) Installs
+1) yarn add babel-preset-react babel-preset-env
+
+Babel
+babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
+
+
+To reinstall modules
+yarn install
