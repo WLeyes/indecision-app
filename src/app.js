@@ -6,7 +6,7 @@ console.log('App.js is running');
 // TEMPLATE 1
 ////////////////////////////////////////////////////////////////////////////////
 
-var mainHeading = {
+var app = {
   title: 'Indecision App.',
   subTitle: 'Put your life in the hands of a computer.'
 }
@@ -14,8 +14,8 @@ var mainHeading = {
 var template = (
   <article>
     <section>
-      <h1>{mainHeading.title}</h1>
-      <h2>{mainHeading.subTitle}</h2>
+      <h1>{app.title}</h1>
+      <h2>{app.subTitle}</h2>
     </section>
   </article>
 );
@@ -26,7 +26,7 @@ var template = (
 var user = {
   firstName: 'John',
   lastName : 'Smith',
-  age      :  65,
+  age      :  60,
   location: 'Springfield'
 };
 
@@ -41,4 +41,4 @@ var templateTwo = (
 );
 
 var appRoot = document.querySelector('.app');
-ReactDOM.render(template, appRoot);
+ReactDOM.render(templateTwo, appRoot);

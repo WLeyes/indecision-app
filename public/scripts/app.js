@@ -8,7 +8,7 @@ console.log('App.js is running');
 // TEMPLATE 1
 ////////////////////////////////////////////////////////////////////////////////
 
-var mainHeading = {
+var app = {
   title: 'Indecision App.',
   subTitle: 'Put your life in the hands of a computer.'
 };
@@ -22,12 +22,12 @@ var template = React.createElement(
     React.createElement(
       'h1',
       null,
-      mainHeading.title
+      app.title
     ),
     React.createElement(
       'h2',
       null,
-      mainHeading.subTitle
+      app.subTitle
     )
   )
 );
@@ -38,7 +38,7 @@ var template = React.createElement(
 var user = {
   firstName: 'John',
   lastName: 'Smith',
-  age: 65,
+  age: 60,
   location: 'Springfield'
 };
 
@@ -71,4 +71,4 @@ var templateTwo = React.createElement(
 );
 
 var appRoot = document.querySelector('.app');
-ReactDOM.render(template, appRoot);
+ReactDOM.render(templateTwo, appRoot);
