@@ -24,18 +24,23 @@ var template = (
 // TEMPLATE 2
 ////////////////////////////////////////////////////////////////////////////////
 var user = {
-  firstName: 'John',
-  lastName : 'Smith',
-  age      :  60,
+  name: 'John',
+  age      :  18,
   location: 'Springfield'
 };
+
+function getLocation(location) {
+  if(location) {
+    return <p>Location: {location}</p>;
+  }
+}
 
 var templateTwo = (
   <article>
     <section>
-      <h1>{user.firstName} {user.lastName}</h1>
-      <p>Age: {user.age}</p>
-      <p>Location: {user.location}</p>
+      <h1>{user.name ? user.name : 'Anonymous'}</h1>
+      {(user.age && user.age >= 18) && <p>Age: {user.age}</p>}
+      {getLocation(user.location)}
     </section>
   </article>
 );
